@@ -1,0 +1,33 @@
+format = "$all"
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[username]
+style_user = "white bold"
+style_root = "red bold"
+format = "[${user}@]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold green) "
+disabled = false
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+style = "yellow"
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[➜](bold red) "
+
+[python]
+symbol=" "
+style="green bold"
+
+[aws]
+disabled=true
