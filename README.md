@@ -1,4 +1,11 @@
-## monk3yd system
+# monk3yd system
+
+### Add bare repo for administration of configuration files:
+https://www.youtube.com/watch?v=tBoLDpTWVOM&t=155s
+1. git init --bare $HOME/dotfiles
+2. alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME' (add this alias to .bashrc/.zshrc)
+3. bash|zsh
+4. config config --local status.showUntrackedFiles no
 
 ### Installs - TODO create bash script for installing
 #### WMs
