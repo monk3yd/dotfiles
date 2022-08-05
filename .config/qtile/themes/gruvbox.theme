@@ -1,0 +1,24 @@
+# COLORS FOR THE BAR
+# Theme name : Gruvbox
+def init_colors():
+    return [
+        ["#282828", "#282828"],  # color 0  # black/background
+        ["#cc241d", "#cc241d"],  # color 1  # red
+        ["#98971a", "#98971a"],  # color 2  # green
+        ["#d79921", "#d79921"],  # color 3  # yellow
+        ["#458588", "#458588"],  # color 4  # blue
+        ["#b16286", "#b16286"],  # color 5  # magenta/purple
+        ["#689d6a", "#689d6a"],  # color 6  # cyan/aqua
+        ["#a89984", "#a89984"],  # color 7  # white/gray
+        ["#928374", "#928374"],  # color 8  # gray
+        ["#fb4934", "#fb4934"],  # color 9  # red_alt
+        ["#b8bb26", "#b8bb26"],  # color 10 # green_alt
+        ["#fabd2f", "#fabd2f"],  # color 11 # yellow_alt
+        ["#83a598", "#83a598"],  # color 12 # blue_alt
+        ["#d3869b", "#d3869b"],  # color 13 # magenta_alt
+        ["#8ec07c", "#8ec07c"],  # color 14 # cyan_alt
+        ["#ebdbb2", "#ebdbb2"],  # color 15 # white_alt/foreground
+    ]
+
+
+colors = init_colors()

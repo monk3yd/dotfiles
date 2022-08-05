@@ -1,0 +1,18 @@
+;https://github.com/jaagr/polybar/wiki/Fonts
+; FONTS
+font-0 = "mononoki Nerd Font:style=Regular:size=11;3:"
+font-1 = "mononoki Nerd Font Mono:style=Regular:size=10;3"
+
+; ICONS
+font-2 = "Font Awesome 6 Free Regular:style=Regular:size=10;3"
+font-3 = "Font Awesome 6 Free Solid:style=Solid:size=10;3"
+font-4 = "Font Awesome 6 Brands Regular:style=Regular:size=10;3"
+font-5 = "FontAwesome:style=Regular:size=13;3"
+font-6 = "Material Icons: style=Regular:pixelsize=13;3"
+font-7 = "pomicons-regular.ttf: Pomodoro:style=Regular:size=13;3"
+font-8 = "icomoon:style=Regular:size=13;3"
+font-9 = "octicons:style=Medium:size=13;3"
+
+; OTHERs
+;font-0 = "JetBrainsMono Nerd Font:style=Medium,Regular:size=10.9;3"
+;font-1 = "JetBrainsMono Nerd Font Mono:style=Medium,Regular:size=10;3"
