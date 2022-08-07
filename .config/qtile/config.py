@@ -505,7 +505,7 @@ def start_once():
     subprocess.call([home + '/.config/qtile/scripts/autostart.sh'])
 
 
-@hook.subscribe.startup
+# @hook.subscribe.startup
 def start_always():
     # Set the cursor to something sane in X
     subprocess.Popen(['xsetroot', '-cursor_name', 'left_ptr'])
