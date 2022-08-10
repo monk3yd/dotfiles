@@ -11,10 +11,6 @@ https://www.youtube.com/watch?v=tBoLDpTWVOM&t=155s
 #### WMs
 - qtile
 
-#### Text Editors
-- neovim (source)
-- vscodium (init.vim; settings.json; keybindings.json)
-
 #### Hotkeys & Keybindings (Daemon)
 - sxhkd
 
@@ -31,12 +27,18 @@ https://www.youtube.com/watch?v=tBoLDpTWVOM&t=155s
 #### File Manager
 - thunar
 
-#### Shell
-- zsh
-
 #### Version Control System (VCS)
 - git (generate ssh key)
 - lazygit
+
+#### Text Editors
+- neovim (source)
+Need: cmake, unzip, npm
+
+- vscodium (init.vim; settings.json; keybindings.json)
+
+#### Shell
+- zsh
 
 #### Containers
 - docker
@@ -100,6 +102,14 @@ https://www.youtube.com/watch?v=tBoLDpTWVOM&t=155s
 
 ### wanna install/testing
 - variety
+
+### themes
+- arc-casablanca-dark
+
+### icons
+- sardi ghost flexible colora
+- edu candy beauty arc mint grey
+
 
 ### Extra WMs
 - awesome
