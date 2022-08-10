@@ -1,6 +1,6 @@
 #!/bin/sh
 # dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # shortcuts
 alias j='z'
