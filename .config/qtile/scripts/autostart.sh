@@ -25,7 +25,7 @@ keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 picom --config $HOME/.config/qtile/scripts/picom.conf &
 
 # Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-fill /usr/share/backgrounds/arcolinux-candy/candy-09.jpg &
+feh --bg-fill /home/monk3yd/.config/wallpapers/arcolinux-candy-09.jpg &
 
 # start sxhkd to replace Qtile native key-bindings
 run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
@@ -54,16 +54,18 @@ run insync start &
 # Start terminal
 run alacritty
 
+# Start wallpaper manager
+run variety &
+
 # Enable volume manager
-sleep 13
-run volumeicon &
+# sleep 13
+# run volumeicon &
 
 # run thunar &
 # run firefox &
 # run discord &
 # nitrogen --restore &
 # run todoist &
-# run variety &
 
 
 
