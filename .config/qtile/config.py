@@ -555,7 +555,7 @@ auto_fullscreen = True
 
 focus_on_window_activation = "smart"  # or smart
 
-wmname = "LG3D"
+wmname = "qtile"
 
 # --- Copyright (C) and Licence ---
 # Copyright (c) 2010 Aldo Cortesi

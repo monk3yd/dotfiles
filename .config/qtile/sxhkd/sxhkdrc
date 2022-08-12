@@ -10,42 +10,49 @@
 super + F1
 	firefox
 
-# Neovim
-super + F2
-	nvim
-
 # Thunar
-super + F3
+super + F2
     thunar
 
-#Rofi Fullscreen
+# Neovim
+super + F3
+	nvim
+
+# Rofi Fullscreen
 super + F11
     rofi -theme-str 'window \{width: 100%;height: 100%;\}' -show drun
 
-#Rofi
+# Rofi
 super + F12
     rofi -show drun
-
 
 #################################################################
 # SUPER + ... KEYS
 #################################################################
 
-# Rofi
+# Rofi Apps
 super + d
 	rofi -show drun
+
+# Rofi Windows
+super + w
+    rofi -show window
 
 # alacritty
 super + Return
     alacritty
 
-# Pulsemixer
-super + v
-    pulsemixer
-
 #archlinux-logout
 super + x
     archlinux-logout
+
+# Flameshot GUI
+super + Print
+    flameshot gui
+
+# Pulsemixer
+super + v
+    pulsemixer
 
 #Rofi theme selector
 super + r
@@ -56,8 +63,8 @@ super + Escape
     xkill
 
 #Conky-toggle
-super + c
-    conky-toggle
+# super + c
+#     conky-toggle
 
 # FOCUS WINDOW
 # Focus next/previous window
@@ -77,16 +84,13 @@ super + c
 #  	bspc node --focus south
 
 #conky-rotate
-super + alt + Right
-    conky-rotate -n
+# super + alt + Right
+#     conky-rotate -n
 
 #conky-rotate
-super + alt + Left
-    conky-rotate -p
+# super + alt + Left
+#     conky-rotate -p
 
-# Flameshot GUI
-super + Print
-    flameshot gui
 
 # Rotate windows
 # super + e
@@ -118,7 +122,6 @@ super + shift + s
 	pkill -USR1 -x sxhkd
 
 #File-Manager
-
 #super + shift + Return
 #	thunar
 
@@ -168,7 +171,6 @@ ctrl + alt + c
 #ctrl + alt + g
 #    chromium -no-default-browser-check
 
-#Firefox
 ctrl + alt + f
     firefox
 
@@ -215,6 +217,10 @@ ctrl + alt + r
 # ALT + ... KEYS
 #################################################################
 
+#Wallpaper favorite
+alt + f
+    variety -f
+
 #Wallpaper trash
 alt + t
     variety -t
@@ -223,21 +229,15 @@ alt + t
 alt + n
     variety -n
 
+alt + Right
+    variety -n
+
 #Wallpaper previous
 alt + p
     variety -p
 
-#Wallpaper favorite
-alt + f
-    variety -f
-
-#Wallpaper previous
 alt + Left
     variety -p
-
-#Wallpaper next
-alt + Right
-    variety -n
 
 #Wallpaper toggle-pause
 alt + Up

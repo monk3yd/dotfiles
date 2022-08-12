@@ -51,11 +51,13 @@ run blueman-applet &
 # Start insync
 run insync start &
 
-# Start terminal
-run alacritty
-
 # Start wallpaper manager
 run variety &
+
+run betterlockscreen -l &
+
+# Start terminal
+# run alacritty
 
 # Enable volume manager
 # sleep 13
