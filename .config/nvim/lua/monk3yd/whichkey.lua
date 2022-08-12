@@ -259,7 +259,10 @@ local mappings = {
       p = { "<cmd>Gist -b -p<cr>", "Create Private" },
     },
   },
-
+  -- k = {
+  --   name = "Colorizer",
+  --   t = { "<cmd>ColorizerToggle<cr>"}
+  -- },
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },

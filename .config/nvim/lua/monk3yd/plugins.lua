@@ -120,6 +120,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "rmagatti/auto-session"
   use "tom-anders/telescope-vim-bookmarks.nvim"
+  use { "NvChad/nvim-colorizer.lua", commit = "2c13c8f426ba19f8280c21d54eacc216a4e6d3b2" }
   -- UI
   use "stevearc/dressing.nvim"
 

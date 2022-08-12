@@ -83,6 +83,9 @@ keymap("n", "<leader>v", ":vsplit<CR>", opts)  -- vertically
 keymap("n", "<leader>s", ":split<CR>", opts)  -- horizontally
 
 -- Plugins
+-- Toogle HEX Colorizer
+keymap("n", "<leader>kt", ":ColorizerToggle<CR>", opts)
+
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
