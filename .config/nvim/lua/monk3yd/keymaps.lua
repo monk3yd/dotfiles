@@ -57,6 +57,10 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
+-- Copy/Paste
+-- vim.api.nvim_set_keymap("n", "<C-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
+-- vim.api.nvim_set_keymap("n", "<C-v>", '"+p', {noremap=true, silent=true})
+
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
