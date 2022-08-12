@@ -81,23 +81,11 @@ keys = [
     Key([mod], "Left", lazy.group.prev_window()),
     Key([mod], "Right", lazy.group.next_window()),
 
-
-    # FLIP LAYOUT FOR MONADTALL/MONADWIDE
+    # --- MONADTALL/MONADWIDE LAYOUT
+    # FLIP LAYOUT
     Key([mod, "shift"], "f", lazy.layout.flip()),
 
-    # FLIP LAYOUT FOR BSP
-    # Key([mod, "mod1"], "k", lazy.layout.flip_up()),
-    # Key([mod, "mod1"], "j", lazy.layout.flip_down()),
-    # Key([mod, "mod1"], "l", lazy.layout.flip_right()),
-    # Key([mod, "mod1"], "h", lazy.layout.flip_left()),
-
-    # MOVE WINDOWS UP OR DOWN BSP LAYOUT
-    # Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
-    # Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
-    # Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
-    # Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
-
-    # MOVE WINDOWS UP OR DOWN MONADTALL/MONADWIDE LAYOUT
+    # MOVE WINDOWS UP OR DOWN
     Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
     Key([mod, "shift"], "h", lazy.layout.swap_left()),
@@ -107,21 +95,32 @@ keys = [
     # Key([mod, "shift"], "Left", lazy.layout.swap_left()),
     # Key([mod, "shift"], "Right", lazy.layout.swap_right()),
 
+    # --- BSP LAYOUT ---
+    # FLIP LAYOUT
+    # Key([mod, "mod1"], "k", lazy.layout.flip_up()),
+    # Key([mod, "mod1"], "j", lazy.layout.flip_down()),
+    # Key([mod, "mod1"], "l", lazy.layout.flip_right()),
+    # Key([mod, "mod1"], "h", lazy.layout.flip_left()),
+
+    # MOVE WINDOWS UP OR DOWN
+    # Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
+    # Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
+    # Key([mod, "shift"], "h", lazy.layout.shuffle_left()),
+    # Key([mod, "shift"], "l", lazy.layout.shuffle_right()),
+
+    # --- FLOATING LAYOUT ---
     # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "space", lazy.window.toggle_floating()),
 ]
 
 groups = []
 
-# FOR QWERTY KEYBOARDS
-group_names = ["1", "2", "3", "4", "5", "6", "7", "8"]
+# WORKSPACES BAR
+group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 
-# icons:                 discord:ﭮ           cloud: 樂             ﲳ ﲴ ﴔ ﯢ ﱘ   robot:ﮧ 嗢
-group_labels = ["", "", "", "", "", "", "ﭮ", ""]
-# group_labels = ["1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "0"]
-
-group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall"]
-# group_layouts = ["monadtall", "matrix", "monadtall", "bsp", "monadtall", "matrix", "monadtall", "bsp", "monadtall", "monadtall"]
+# icons:                 discord:ﭮ            cloud: 樂             ﲳ ﲴ ﴔ ﯢ ﱘ   robot:ﮧ 嗢      ﭮ 
+group_labels = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
+group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall"]
 
 for i in range(len(group_names)):
     groups.append(
@@ -139,11 +138,11 @@ for i in groups:
         Key([mod], "Tab", lazy.screen.next_group()),
         Key([mod, "shift"], "Tab", lazy.screen.prev_group()),
 
-        # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
-
         # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND FOLLOW MOVED WINDOW TO WORKSPACE
         Key([mod, "shift"], i.name, lazy.window.togroup(i.name), lazy.group[i.name].toscreen()),
+
+        # MOVE WINDOW TO SELECTED WORKSPACE 1-10 AND STAY ON WORKSPACE
+        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name)),
     ])
 
 # LAYOUT VARIABLES
@@ -165,42 +164,18 @@ def init_layout_theme():
 layout_theme = init_layout_theme()
 layouts = [
     layout.MonadTall(margin=8, border_width=border_width, border_focus=border_focus_color, border_normal=border_normal_color),
+    layout.Bsp(**layout_theme),
+    layout.Matrix(**layout_theme),
     layout.Max(**layout_theme),
     layout.Floating(**layout_theme),
-    layout.Matrix(**layout_theme),
     # layout.RatioTile(**layout_theme),
     # layout.Stack(**layout_theme),
     # layout.Spiral(**layout_theme),
     # layout.MonadWide(margin=8, border_width=border_width, border_focus=border_focus_color, border_normal=border_normal_color),
-    # layout.Bsp(**layout_theme),
 ]
 
 
-# COLORS FOR THE BAR
-# Theme name : Gruvbox
-# def init_colors():
-#     return [
-#         ["#282828", "#282828"],  # color 0  # black/background
-#         ["#cc241d", "#cc241d"],  # color 1  # red
-#         ["#98971a", "#98971a"],  # color 2  # green
-#         ["#d79921", "#d79921"],  # color 3  # yellow
-#         ["#458588", "#458588"],  # color 4  # blue
-#         ["#b16286", "#b16286"],  # color 5  # magenta/purple
-#         ["#689d6a", "#689d6a"],  # color 6  # cyan/aqua
-#         ["#a89984", "#a89984"],  # color 7  # white/gray
-#         ["#928374", "#928374"],  # color 8  # gray
-#         ["#fb4934", "#fb4934"],  # color 9  # red_alt
-#         ["#b8bb26", "#b8bb26"],  # color 10 # green_alt
-#         ["#fabd2f", "#fabd2f"],  # color 11 # yellow_alt
-#         ["#83a598", "#83a598"],  # color 12 # blue_alt
-#         ["#d3869b", "#d3869b"],  # color 13 # magenta_alt
-#         ["#8ec07c", "#8ec07c"],  # color 14 # cyan_alt
-#         ["#ebdbb2", "#ebdbb2"],  # color 15 # white/foreground
-#     ]
-#
-#
-# colors = init_colors()
-
+# COLORS FOR THE BAR (~/.config/qtile/themes/)
 # Theme name : Monokai
 def init_colors():
     return [
@@ -227,14 +202,14 @@ def init_colors():
 colors = init_colors()
 
 # BAR VARIABLES
-
 # Fonts
-font = "mononoki Nerd Font Mono"  # default text & icon font
+# font = "mononoki Nerd Font Mono"
+font = "MonoLisa Nerd Font"  # default text & icon font
 fontsize = 14
 
 # Icons
-bar_icon_size = 26
-monitoring_icon_size = 22
+bar_icon_size = 12
+monitoring_icon_size = 16
 tray_icon_size = 20
 
 # Colors
@@ -244,7 +219,8 @@ foreground = colors[15]
 # Separators
 sep_linewidth = 2
 sep_padding = 10
-sep_size_percent = 100
+sep_size_percent = 80
+sep_fg = colors[7]
 
 
 # WIDGETS FOR THE BAR
@@ -252,7 +228,7 @@ def init_widgets_defaults():
     return dict(
         font=font,
         fontsize=14,
-        padding=2,
+        padding=10,
         background=background,
         foreground=foreground
     )
@@ -267,13 +243,22 @@ def init_widgets_list():
 
     widgets_list = [
         widget.Spacer(
+            length=3
+        ),
+        widget.TextBox(
+            fontsize=monitoring_icon_size,
+            text="  ",
+            padding=0,
+            foreground=colors[1]
+        ),
+        widget.Spacer(
             length=5
         ),
         # WORKSPACES
         widget.GroupBox(
-            font=font,
+            font="MonoLisa Nerd Font Bold",
             fontsize=bar_icon_size,
-            padding_x=14,
+            padding_x=10,
             highlight_color=background,  # highlight box color (same as bg)
             highlight_method="line",
             block_highlight_text_color=colors[1],  # focus text/icon color
@@ -284,9 +269,22 @@ def init_widgets_list():
             disable_drag=True,
             rounded=False,
             center_aligned=True,
-            hide_unused=False,
+            hide_unused=True,
         ),
         widget.Sep(
+            foreground=sep_fg,
+            linewidth=sep_linewidth,
+            padding=sep_padding,
+            size_percent=sep_size_percent
+        ),
+        # LAYOUT
+        widget.CurrentLayout(
+            font=font,
+            fontsize=fontsize,
+            foreground=colors[7]
+        ),
+        widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
@@ -298,16 +296,7 @@ def init_widgets_list():
             foreground=colors[1]
         ),
         widget.Sep(
-            linewidth=sep_linewidth,
-            padding=sep_padding,
-            size_percent=sep_size_percent
-        ),
-        # LAYOUT
-        widget.CurrentLayout(
-            font=font,
-            fontsize=fontsize,
-        ),
-        widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
@@ -324,14 +313,15 @@ def init_widgets_list():
             update_interval=1
         ),
         widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
         ),
-        # THERMALSENSOR 﨏
+        # THERMALSENSOR 﨏
         widget.TextBox(
             fontsize=monitoring_icon_size,
-            text="  ",
+            text="  ",
             padding=0,
             # foreground=["#cc241d", "#458588"]  # from blue to red
             foreground=colors[4]  # from blue to red
@@ -348,6 +338,7 @@ def init_widgets_list():
             tag_sensor="edge"
         ),
         widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
@@ -365,6 +356,7 @@ def init_widgets_list():
             update_interval=1,
         ),
         widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
@@ -381,6 +373,7 @@ def init_widgets_list():
             update_interval=1.0
         ),
         widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
@@ -390,7 +383,6 @@ def init_widgets_list():
             font=font,
             fontsize=monitoring_icon_size,
             text="  ",
-            # text="  ",
             foreground=colors[3],
             padding=0,
         ),
@@ -399,6 +391,7 @@ def init_widgets_list():
             udpate_internal=1.0
         ),
         widget.Sep(
+            foreground=sep_fg,
             linewidth=sep_linewidth,
             padding=sep_padding,
             size_percent=sep_size_percent
@@ -453,44 +446,43 @@ mouse = [
 dgroups_key_binder = None
 dgroups_app_rules = []
 
+
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
 # BEGIN
-
 #########################################################
 ################ assgin apps to groups ##################
 #########################################################
-# @hook.subscribe.client_new
-# def assign_app_group(client):
-#     d = {}
-#     #####################################################################################
-#     ### Use xprop fo find  the value of WM_CLASS(STRING) -> First field is sufficient ###
-#     #####################################################################################
-#     d[group_names[0]] = ["Navigator", "Firefox", "Vivaldi-stable", "Vivaldi-snapshot", "Chromium", "Google-chrome", "Brave", "Brave-browser",
-#               "navigator", "firefox", "vivaldi-stable", "vivaldi-snapshot", "chromium", "google-chrome", "brave", "brave-browser", ]
-#     d[group_names[1]] = [ "Atom", "Subl", "Geany", "Brackets", "Code-oss", "Code", "TelegramDesktop", "Discord",
-#                "atom", "subl", "geany", "brackets", "code-oss", "code", "telegramDesktop", "discord", ]
-#     d[group_names[2]] = ["Inkscape", "Nomacs", "Ristretto", "Nitrogen", "Feh",
-#               "inkscape", "nomacs", "ristretto", "nitrogen", "feh", ]
+@hook.subscribe.client_new
+def assign_app_group(client):
+    d = {}
+    #####################################################################################
+    ### Use xprop fo find  the value of WM_CLASS(STRING) -> First field is sufficient ###
+    #####################################################################################
+    d[group_names[0]] = ["Alacritty", "Atom", "Subl", "Geany", "Brackets", "Code-oss", "Code", "TelegramDesktop", "Discord",
+        "atom", "subl", "geany", "brackets", "code-oss", "code", "telegramDesktop", "discord", ]
+    d[group_names[1]] = ["Navigator", "Firefox", "Vivaldi-stable", "Vivaldi-snapshot", "Chromium", "Google-chrome", "Brave", "Brave-browser",
+        "navigator", "firefox", "vivaldi-stable", "vivaldi-snapshot", "chromium", "google-chrome", "brave", "brave-browser"]
+    d[group_names[2]] = ["Thunar", "Nemo", "Caja", "Nautilus", "org.gnome.Nautilus", "Pcmanfm", "Pcmanfm-qt",
+              "thunar", "nemo", "caja", "nautilus", "org.gnome.nautilus", "pcmanfm", "pcmanfm-qt", ]
 #     d[group_names[3]] = ["Gimp", "gimp" ]
 #     d[group_names[4]] = ["Meld", "meld", "org.gnome.meld" "org.gnome.Meld" ]
 #     d[group_names[5]] = ["Vlc","vlc", "Mpv", "mpv" ]
 #     d[group_names[6]] = ["VirtualBox Manager", "VirtualBox Machine", "Vmplayer",
 #               "virtualbox manager", "virtualbox machine", "vmplayer", ]
-#     d[group_names[7]] = ["Thunar", "Nemo", "Caja", "Nautilus", "org.gnome.Nautilus", "Pcmanfm", "Pcmanfm-qt",
-#               "thunar", "nemo", "caja", "nautilus", "org.gnome.nautilus", "pcmanfm", "pcmanfm-qt", ]
+#    d[group_names[7]] = ["Inkscape", "Nomacs", "Ristretto", "Nitrogen", "Feh",
+#       "inkscape", "nomacs", "ristretto", "nitrogen", "feh", ]
 #     d[group_names[8]] = ["Evolution", "Geary", "Mail", "Thunderbird",
 #               "evolution", "geary", "mail", "thunderbird" ]
 #     d[group_names[9]] = ["Spotify", "Pragha", "Clementine", "Deadbeef", "Audacious",
 #               "spotify", "pragha", "clementine", "deadbeef", "audacious" ]
 #     ######################################################################################
 #
-# wm_class = client.window.get_wm_class()[0]
-#
-#     for i in range(len(d)):
-#         if wm_class in list(d.values())[i]:
-#             group = list(d.keys())[i]
-#             client.togroup(group)
-#             client.group.cmd_toscreen(toggle=False)
+    wm_class = client.window.get_wm_class()[0]
+    for i in range(len(d)):
+        if wm_class in list(d.values())[i]:
+            group = list(d.keys())[i]
+            client.togroup(group)
+            client.group.cmd_toscreen(toggle=False)
 
 # END
 # ASSIGN APPLICATIONS TO A SPECIFIC GROUPNAME
