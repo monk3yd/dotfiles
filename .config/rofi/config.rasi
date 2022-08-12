@@ -16,11 +16,11 @@ configuration {
 
 
 * {
-  bg: #11121D;
-  bg-alt: #444b6a;
+  bg: #181819;
+  bg-alt: #2c2e34;
 
-  fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg: #7f8490;
+  fg-alt: #e2e2e3;
 
   background-color: @bg;
   
