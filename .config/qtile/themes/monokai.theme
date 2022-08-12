@@ -18,6 +18,7 @@ def init_colors():
         ["#b39df3", "#b39df3"]  # color 13 # magenta_alt
         ["#f39660", "#f39660"]  # color 14 # cyan_alt
         ["#e2e2e3", "#e2e2e3"]  # color 15 # white_alt/foreground
+        ["#2c2e34", "#2c2e34"],  # color 16 # bg0
     ]
 
 
