@@ -14,13 +14,22 @@ configuration {
 /* Config in differente file, replace default theme */
 /* @theme "/home/monk3yd/.config/rofi/theme.rasi" */
 
+/* colors: */
+  /* #181819 */
+  /* #7f8490 */
+  /* #e7c664 */
+  /* #fc5d7c */
+  /* #b39df3 */
+  /* #f39660 */
 
 * {
-  bg: #181819;
-  bg-alt: #2c2e34;
+  /* background colors */
+  bg: #2c2e34;
+  bg-alt: #181819;
 
-  fg: #7f8490;
-  fg-alt: #e2e2e3;
+  /* text colors */
+  fg: #f39660;
+  fg-alt: #b39df3;
 
   background-color: @bg;
   
@@ -66,8 +75,8 @@ inputbar {
 listview {
   padding: 8 12;
   background-color: @bg;
-  columns: 1;
-  lines: 8;
+  columns: 2;
+  lines: 6;
 }
 
 mainbox {
