@@ -56,12 +56,12 @@ run variety &
 
 run betterlockscreen -l &
 
+# Enable volume manager
+sleep 13
+run volumeicon &
+
 # Start terminal
 # run alacritty
-
-# Enable volume manager
-# sleep 13
-# run volumeicon &
 
 # run thunar &
 # run firefox &

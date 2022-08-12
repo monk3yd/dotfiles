@@ -301,6 +301,26 @@ def init_widgets_list():
             padding=sep_padding,
             size_percent=sep_size_percent
         ),
+        # widget.Volume(
+        #     font=font,
+        #     fontsize=fontsize,
+        #     foreground=colors[15],
+        #     emoji=True,
+        #     get_volume_command="pamixer --get-volume-human",
+        #     check_mute_command="pamixer --get-mute",
+        #     check_mute_string="true",
+        #     volume_up_command="pamixer -i 2",
+        #     volume_down_command="pamixer -d 2",
+        #     mute_command="pamixer -t",
+        #     theme_path="/usr/share/icons/breeze/status/16/audio-on.svg"
+        #     # mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("easyeffects")}
+        # ),
+        # widget.Sep(
+        #     foreground=sep_fg,
+        #     linewidth=sep_linewidth,
+        #     padding=sep_padding,
+        #     size_percent=sep_size_percent
+        # ),
         # KEYBOARD LAYOUT
         widget.KeyboardLayout(
             background=background,
