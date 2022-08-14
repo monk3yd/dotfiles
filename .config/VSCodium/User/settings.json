@@ -1152,5 +1152,6 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
+    "glassit.alpha": 200,
 
 }
