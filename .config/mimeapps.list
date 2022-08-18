@@ -1,0 +1,13 @@
+[Added Associations]
+application/pdf=firefox.desktop;gimp.desktop;
+application/x-shellscript=nvim.desktop;codium.desktop;
+text/x-python=codium.desktop;
+application/xml=nvim.desktop;
+text/x-scheme=nvim.desktop;
+text/plain=userapp-alacritty -e nvim-F1KTQ1.desktop;
+
+[Default Applications]
+x-scheme-handler/postman=Postman.desktop
+text/plain=userapp-alacritty -e nvim-F1KTQ1.desktop
+
+[Removed Associations]
