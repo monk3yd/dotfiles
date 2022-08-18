@@ -5,7 +5,7 @@
 	<name>Terminal</name>
 	<unique-id>1660851987243631-1</unique-id>
     <command>/usr/bin/alacritty</command>
-	<description>Example for a custom action</description>
+	<description>Open alacritty in current directory</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<directories/>
