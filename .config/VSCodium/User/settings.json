@@ -1153,5 +1153,6 @@
         "jupyter-notebook": "left"
     },
     "glassit.alpha": 200,
+    "security.workspace.trust.banner": "never",
 
 }
