@@ -5,7 +5,7 @@
     // Workbench
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.startupEditor": "newUntitledFile",
-    // "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "material-icon-theme",
     // Editor
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
@@ -17,12 +17,12 @@
     "editor.snippetSuggestions": "bottom",
     // Terminal
     "terminal.integrated.fontFamily": "MonoLisa Nerd Font",
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    // "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "terminal.external.linuxExec": "/usr/bin/alacritty",
     // Python
     "python.condaPath": "$HOME/anaconda3/bin/conda",
     "python.formatting.provider": "black",
-    "python.languageServer": "Pylance",
+    // "python.languageServer": "Pylance",
     "python.terminal.activateEnvironment": false,
     // Whichkey
     "whichkey.sortOrder": "alphabetically",
@@ -1121,9 +1121,12 @@
     //     }
     // },
     "gitlens.currentLine.enabled": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    // "[javascript]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // "[jsonc]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
     "emmet.showSuggestionsAsSnippets": true,
     "material-icon-theme.showWelcomeMessage": false,
     "git.autofetch": true,
@@ -1134,7 +1137,7 @@
     },
     "jupyter.alwaysTrustNotebooks": true,
     "jupyter.insidersChannel": "off",
-    "debug.inlineValues": true,
+    "debug.inlineValues": "auto",
     "gitlens.codeLens.enabled": false,
     "gitlens.hovers.annotations.over": "annotation",
     "gitlens.hovers.enabled": false,
@@ -1154,5 +1157,13 @@
     },
     "glassit.alpha": 200,
     "security.workspace.trust.banner": "never",
-
+    "python.formatting.blackPath": "/home/monk3yd/anaconda3/bin/black",
+    "python.globalModuleInstallation": true,
+    "python.linting.flake8Path": "/home/monk3yd/anaconda3/bin/flake8",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "python.defaultInterpreterPath": "/home/monk3yd/anaconda3/bin/python",
+    "editor.lineNumbers": "relative",
+    "workbench.preferredHighContrastColorTheme": "Gruvbox Material Dark",
+    "workbench.preferredDarkColorTheme": "Gruvbox Material Dark",
+    "gruvboxMaterial.darkContrast": "hard",
 }
