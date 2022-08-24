@@ -7,25 +7,14 @@ function run {
   fi
 }
 
-#Find out your monitor name with xrandr or arandr (save and you get this line)
-xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --rotate normal
-
-# change your keyboard if you need it
-# setxkbmap -layout es
-
-keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
-
 # autostart ArcoLinux Welcome App
 # run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
 
 # For authentication
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # start compositor
 picom --config $HOME/.config/qtile/scripts/picom.conf &
-
-# Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-fill /home/monk3yd/.config/wallpapers/arcolinux-candy-09.jpg &
 
 # start sxhkd to replace Qtile native key-bindings
 run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
@@ -54,7 +43,8 @@ run insync start &
 # Start wallpaper manager
 run variety &
 
-run betterlockscreen -l &
+# Lock display at boot
+betterlockscreen -l &
 
 # Enable volume manager
 sleep 13
