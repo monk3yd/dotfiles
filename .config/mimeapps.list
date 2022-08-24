@@ -1,8 +1,8 @@
 [Added Associations]
-application/pdf=firefox.desktop;gimp.desktop;
-application/x-shellscript=nvim.desktop;codium.desktop;
-text/x-python=codium.desktop;
-application/xml=nvim.desktop;
+application/pdf=okularApplication_pdf.desktop;firefox.desktop;gimp.desktop;
+application/x-shellscript=userapp-alacritty -e nvim-F1KTQ1.desktop;nvim.desktop;codium.desktop;
+text/x-python=userapp-alacritty -e nvim-F1KTQ1.desktop;codium.desktop;
+application/xml=userapp-alacritty -e nvim-F1KTQ1.desktop;nvim.desktop;
 text/x-scheme=nvim.desktop;
 text/plain=userapp-alacritty -e nvim-F1KTQ1.desktop;
 
