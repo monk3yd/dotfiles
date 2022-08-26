@@ -5,7 +5,8 @@
 - npm
 - cmake
 - unzip
+- xsel
 
 ```
-sudo pacman -S ripgrep nodejs npm cmake unzip
+sudo pacman -S ripgrep nodejs npm cmake unzip xsel
 ```
