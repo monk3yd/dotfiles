@@ -104,7 +104,7 @@ keys = [
     Key(["mod1", "control"], "a", lazy.spawn('xfce4-appfinder')),
     Key(["mod1", "control"], "b", lazy.spawn('thunar')),
     Key(["mod1", "control"], "c", lazy.spawn('catfish')),
-    Key(["mod1", "control"], "e", lazy.spawn('arcolinux-tweak-tool')),
+    Key(["mod1", "control"], "e", lazy.spawn('archlinux-tweak-tool')),
     Key(["mod1", "control"], "f", lazy.spawn('firefox')),
     Key(["mod1", "control"], "g", lazy.spawn('chromium -no-default-browser-check')),
     Key(["mod1", "control"], "i", lazy.spawn('nitrogen')),
@@ -633,7 +633,7 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Arcolinux-welcome-app.py'},
-    {'wmclass': 'Arcolinux-tweak-tool.py'},
+    {'wmclass': 'Archlinux-tweak-tool.py'},
     {'wmclass': 'confirm'},
     {'wmclass': 'dialog'},
     {'wmclass': 'download'},
@@ -648,7 +648,7 @@ floating_layout = layout.Floating(float_rules=[
     {'wmclass': 'Arandr'},
     {'wmclass': 'feh'},
     {'wmclass': 'Galculator'},
-    {'wmclass': 'arcolinux-logout'},
+    {'wmclass': 'archlinux-logout'},
     {'wmclass': 'xfce4-terminal'},
     {'wname': 'branchdialog'},
     {'wname': 'Open File'},
