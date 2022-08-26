@@ -32,3 +32,6 @@ exec bspwm -c ~/.config/bspwm/bspwmrc
 
 # Start qtile
 # exec qtile start
+
+# Start xfce
+# exec startxfce4
