@@ -1,13 +1,10 @@
 
 ## Dependencies
 
-ripgrep
+- ripgrep
+- npm
+- cmake
 
 ```
-sudo pacman -S ripgrep
-```
-
-# npm
-```
-sudo pacman -S nodejs npm
+sudo pacman -S ripgrep nodejs npm cmake
 ```
