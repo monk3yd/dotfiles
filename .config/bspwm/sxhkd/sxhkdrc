@@ -6,51 +6,39 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Vivaldi
+# Firefox
 super + F1
-	vivaldi-stable
+	firefox
 
-# Atom
+# Neovim
 super + F2
-	atom
+	alacritty -e nvim
 
-#Inkscape
+# Thunar
 super + F3
-    inkscape
+    thunar
 
-#Gimp
+# Gimp
 super + F4
     gimp
 
-#Meld
+# Meld
 super + F5
     meld
 
-#Vlc
+# Vlc
 super + F6
     vlc --video-on-top
 
-#Virtualbox
+# Virtualbox
 super + F7
     virtualbox
 
-#Thunar
-super + F8
-    thunar
-
-#Evolution
-super + F9
-    evolution
-
-#Spotify
-super + F10
-    spotify
-
-#Rofi Fullscreen
+# Rofi Fullscreen
 super + F11
     rofi -theme-str 'window \{width: 100%;height: 100%;\}' -show drun
 
-#Rofi
+# Rofi
 super + F12
     rofi -show drun
 
@@ -58,33 +46,37 @@ super + F12
 # SUPER + ... KEYS
 #################################################################
 
-#Atom
-super + e
-    atom
+#alacritty
+super + Return
+    alacritty
 
-#Browser
+# Rofi applications
+super + d
+    rofi -show drun
+
+# Rofi windows
 super + w
-    vivaldi-stable
-
-#Conky-toggle
-super + c
-    conky-toggle
-
-#Htop
-super + h
-    urxvt 'htop task manager' -e htop
-
-#archlinux-logout
-super + x
-    archlinux-logout
+    rofi -show window
 
 #Rofi theme selector
 super + r
     rofi-theme-selector
 
+#Conky-toggle
+super + c
+    conky-toggle
+
+# Htop
+# super + h
+#     urxvt 'htop task manager' -e htop
+
 #Urxvt
 super + t
     urxvt
+
+# archlinux-logout
+# super + x
+#     archlinux-logout
 
 #Pavucontrol
 super + v
@@ -93,10 +85,6 @@ super + v
 #Pragha
 super + m
     pragha
-
-#alacritty
-super + Return
-    alacritty
 
 #Xkill
 super + Escape
@@ -124,7 +112,7 @@ super + shift + Return
 super + shift + d
 	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
-#reload sxhkd:
+# reload sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
 
@@ -529,7 +517,7 @@ super + ctrl + {_,shift +}{1-9}
 alt + Tab
 	bspc desktop -f '^{1-9,10}'
 
-	#Focus selected desktop
+#Focus selected desktop
 alt + shift + Tab
 	bspc desktop -f '^{1-9,10}'
 
@@ -576,24 +564,12 @@ ctrl + alt + Down
 super + {1-9,0}
 	bspc desktop -f '^{1-9,10}'
 
-#Focus selected desktop	FOR BELIGIAN AZERTY KEYBOARDS
-#super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
-#    bspc desktop -f '^{1-9,10}'
-
-#Focus selected desktop	FOR FRNECH AZERTY KEYBOARDS
-#super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
-#    bspc desktop -f '^{1-9,10}'
-
 #################################################################
 
 #Switch here between qwerty and azerty or make new one
 #Move window to selected desktop FOR QWERTY KEYBOARDS
 super + shift + {1-9,0}
     id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
-
-#Move window to selected desktop FOR AZERTY KEYBOARDS
-#super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
-#    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 #################################################################
 

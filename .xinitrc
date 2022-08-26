@@ -24,8 +24,11 @@ keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
 # Set background
 # Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-fill /home/monk3yd/.config/wallpapers/variety/onepiece-jolly-roger.png &
-# feh --bg-fill /home/monk3yd/.config/wallpapers/arcolinux-candy/candy-09.jpg &
+feh --bg-fill /home/monk3yd/GDrive/theLab/wallpapers/favorites/jolly.png &
+
+# Start bspwm
+sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+exec bspwm -c ~/.config/bspwm/bspwmrc
 
 # Start qtile
-exec qtile start
+# exec qtile start
