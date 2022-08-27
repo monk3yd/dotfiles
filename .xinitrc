@@ -21,6 +21,9 @@ xrandr --output HDMI-A-0 --primary --mode 1920x1080 --rate 144.00 --pos 0x0 --ro
 # Set something with cursor
 xsetroot -cursor_name left_ptr &
 
+# Set cursor theme
+xrdb ~/.Xresources
+
 # change your keyboard if you need it
 # setxkbmap -layout es
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
