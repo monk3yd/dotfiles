@@ -24,9 +24,13 @@ run xfsettingsd &
 
 # network tray
 run nm-applet &
-blueman-applet &
+run blueman-applet &
 run insync start &
+
+sleep 13
 run volumeicon &
+
+run alacritty
 
 # conky -c $HOME/.config/bspwm/system-overview &
 # run variety &
