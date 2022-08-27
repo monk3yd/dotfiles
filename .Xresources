@@ -1,3 +1,6 @@
+# Setup cursor
+Xcursor.theme: Bibata-Modern-Ice
+
 ! ------------------------------------------------------------------------------
 ! URxvt standard arcolinux theme - Reload with xrdb -merge ~/.Xresources
 ! or alias merge
