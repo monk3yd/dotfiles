@@ -403,6 +403,10 @@ super + f
 super + p
 	bspc node --state \~pseudo_tiled
 
+# Flameshot
+super + Print
+    flameshot gui
+
 #kill
 super + q
 	bspc node -c
