@@ -26,7 +26,6 @@
     "python.terminal.activateEnvironment": false,
     // Whichkey
     "whichkey.sortOrder": "alphabetically",
-    "whichkey.delay": 0,
     "whichkey.bindings": [
         {
             "key": ";",
@@ -989,7 +988,7 @@
             "command": "workbench.action.toggleZenMode"
         }
     ],
-    "sync.gist": "939951904a077b97f8001bc35f6b5948",
+    "sync.gist": "cae43ec2310dc25c8fc18f8e5e23b181",
     "gitlens.hovers.currentLine.over": "line",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -1165,5 +1164,12 @@
     "editor.lineNumbers": "relative",
     "workbench.preferredHighContrastColorTheme": "Gruvbox Material Dark",
     "workbench.preferredDarkColorTheme": "Gruvbox Material Dark",
-    "gruvboxMaterial.darkContrast": "hard",
+    "terminal.integrated.inheritEnv": false,
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.askForKernelRestart": false,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.explorerKind": "external",
+    "whichkey.delay": 50,
 }
