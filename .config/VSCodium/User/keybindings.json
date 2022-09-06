@@ -233,7 +233,7 @@
     {
         "key": "shift+l",
         "command": "workbench.action.nextEditor",
-        "when": "neovim.mode != 'insert' && inputFocus"
+        "when": "neovim.mode != 'insert'"
     },
     {
         "key": "ctrl+pagedown",
@@ -242,7 +242,7 @@
     {
         "key": "shift+h",
         "command": "workbench.action.previousEditor",
-        "when": "neovim.mode != 'insert' && inputFocus"
+        "when": "neovim.mode != 'insert'"
     },
     {
         "key": "ctrl+pageup",
@@ -266,13 +266,23 @@
         "command": "-workbench.action.splitEditor"
     },
     {
-        "key": "ctrl+\\",
-        "command": "workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
         "key": "ctrl+`",
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "-workbench.action.terminal.openNativeConsole",
+        "when": "!terminalFocus"
     },
 ]
