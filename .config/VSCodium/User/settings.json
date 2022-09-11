@@ -1,12 +1,10 @@
 {
-    // VSCode/Neovim Core Executables
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/monk3yd/.config/vscodium_nvim/init.vim",
-    // Workbench
+    // --- Workbench ---
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "material-icon-theme",
-    // Editor
+
+    // --- Editor ---
     "editor.cursorBlinking": "solid",
     "editor.cursorStyle": "block",
     "editor.fontFamily": "MonoLisa Nerd Font, JetBrainsMono Nerd Font, Hack, Menlo, Monaco, 'Courier New', monospace",
@@ -15,15 +13,22 @@
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "auto",
     "editor.snippetSuggestions": "bottom",
-    // Terminal
+
+    // --- Terminal ---
     "terminal.integrated.fontFamily": "MonoLisa Nerd Font",
     // "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "terminal.external.linuxExec": "/usr/bin/alacritty",
-    // Python
+
+    // --- Python ---
     "python.condaPath": "$HOME/anaconda3/bin/conda",
     "python.formatting.provider": "black",
     // "python.languageServer": "Pylance",
     "python.terminal.activateEnvironment": false,
+
+    // --- VSCode/Neovim Extension ---
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/monk3yd/.config/vscodium-nvim/init.vim",
+
     // Whichkey
     "whichkey.sortOrder": "alphabetically",
     "whichkey.bindings": [
@@ -1172,4 +1177,17 @@
     },
     "terminal.explorerKind": "external",
     "whichkey.delay": 50,
+    "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
+    "aws.experiments": {
+        "CodeWhisperer": false
+    },
+    "aws.telemetry": false,
+    "explorer.confirmDelete": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "aws.codeWhisperer.includeSuggestionsWithCodeReferences": false,
+    "vscode-neovim.logLevel": "none",
+    "vscode-neovim.neovimClean": true,
 }
