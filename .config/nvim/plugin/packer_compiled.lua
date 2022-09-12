@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -153,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["jupyter_ascending.vim"] = {
+    loaded = true,
+    path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/jupyter_ascending.vim",
+    url = "https://github.com/untitled-ai/jupyter_ascending.vim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -238,11 +248,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
-  },
-  sonokai = {
-    loaded = true,
-    path = "/home/monk3yd/.local/share/nvim/site/pack/packer/start/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
   },
   ["telescope-vim-bookmarks.nvim"] = {
     loaded = true,

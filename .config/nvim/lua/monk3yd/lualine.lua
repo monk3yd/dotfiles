@@ -50,8 +50,8 @@ lualine.setup {
   options = {
     globalstatus = true,
     icons_enabled = true,
-    theme = "sonokai",  -- auto
-    -- theme = "gruvbox-material",
+    -- theme = "sonokai",  -- auto
+    theme = "gruvbox-material",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard" },

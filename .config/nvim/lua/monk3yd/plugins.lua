@@ -50,8 +50,8 @@ return packer.startup(function(use)
   use { "goolord/alpha-nvim", commit = "ef27a59e5b4d7b1c2fe1950da3fe5b1c5f3b4c94" }
 
   -- Colorschemes
-  use "sainnhe/sonokai"
-  -- use "sainnhe/gruvbox-material"
+  -- use "sainnhe/sonokai"
+  use "sainnhe/gruvbox-material"
   -- use "gruvbox-community/gruvbox"
   -- use "folke/tokyonight.nvim"
 
@@ -116,13 +116,17 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim", commit = "8798b4c36d33723e7bba6ed6e2c202f84bb300de" }
 
   -- END OF CORE PLUGINS
+
   -- EXPERIMENTAL EXTENSIONS
   use "folke/which-key.nvim"
   use "rmagatti/auto-session"
   use "tom-anders/telescope-vim-bookmarks.nvim"
   use { "NvChad/nvim-colorizer.lua", commit = "2c13c8f426ba19f8280c21d54eacc216a4e6d3b2" }
+
   -- UI
   use "stevearc/dressing.nvim"
+  -- Jupyter Notebooks
+  use { "untitled-ai/jupyter_ascending.vim" }
 
 
   -- "Want to install" Plugins
