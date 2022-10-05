@@ -88,11 +88,6 @@ export BROWSER="firefox"
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-# remap caps to escape
-# setxkbmap -option caps:escape
-# swap escape and caps
-# setxkbmap -option caps:swapescape
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/monk3yd/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
