@@ -41,6 +41,23 @@
       "when": "editorTextFocus && neovim.mode != insert",
       "args": "<C-w>v"
     },
+    // Move through open tabs
+    {
+      "key": "shift+l",
+      "command": "workbench.action.nextEditor",
+      "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+      "key": "shift+h",
+      "command": "workbench.action.previousEditor",
+      "when": "editorTextFocus && neovim.mode != insert",
+    },
+    // WhichKey
+    {
+      "key": "space",
+      "command": "whichkey.show",
+      "when": "editorTextFocus && neovim.mode != insert"
+    },
     {
       "key": "shift+ctrl+e",
       "command": "actions.findWithSelection"
@@ -217,5 +234,15 @@
     {
       "key": "ctrl+\\",
       "command": "-workbench.action.splitEditor"
-    }
+    },
+    {
+      "key": "ctrl+\\",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+    },
+    {
+      "key": "ctrl+`",
+      "command": "-workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+    },
   ]

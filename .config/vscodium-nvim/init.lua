@@ -1,9 +1,13 @@
 -- TODO: One config to rule them all
+
 -- if vim.g.vscode then
     -- VSCode extension
 -- else
     -- ordinary Neovim
 --end
+
+
+-- Functions --
 
 -- Keymappings --
 
@@ -49,22 +53,41 @@ keymap("x", "<C-w>v", ":call <SID>split('v')<CR>", opts)
 keymap("n", "<C-w>n", ":call <SID>splitNew('h', '__vscode_new__')<CR>", opts)
 keymap("x", "<C-w>n", ":call <SID>splitNew('h', '__vscode_new__')<CR>", opts)
 
--- Manage editor's size
+-- Manage editors' size (need function)
 keymap("n", "<C-w>>", ":<C-u>call <SID>manageEditorSize(v:count, 'increase')<CR>", opts)
 keymap("x", "<C-w>>", ":<C-u>call <SID>manageEditorSize(v:count, 'increase')<CR>", opts)
 
-keymap("n", "<C-w>+", ":<C-u>call <SID>manageEditorSize(v:count, 'increase')<CR>", opts)
-keymap("x", "<C-w>+", ":<C-u>call <SID>manageEditorSize(v:count, 'increase')<CR>", opts)
+-- keymap("n", "<C-w>+", ":<C-u>call <SID>manageEditorSize(v:count, 'increase')<CR>", opts)
+-- keymap("x", "<C-w>+", ":<C-u>call <SID>manageEditorSize(v:count, 'increase')<CR>", opts)
 
 keymap("n", "<C-w><", ":<C-u>call <SID>manageEditorSize(v:count, 'decrease')<CR>", opts)
 keymap("x", "<C-w><", ":<C-u>call <SID>manageEditorSize(v:count, 'decrease')<CR>", opts)
 
-keymap("n", "<C-w>-", ":<C-u>call <SID>manageEditorSize(v:count, 'decrease')<CR>", opts)
-keymap("x", "<C-w>-", ":<C-u>call <SID>manageEditorSize(v:count, 'decrease')<CR>", opts)
+-- keymap("n", "<C-w>-", ":<C-u>call <SID>manageEditorSize(v:count, 'decrease')<CR>", opts)
+-- keymap("x", "<C-w>-", ":<C-u>call <SID>manageEditorSize(v:count, 'decrease')<CR>", opts)
+
+keymap("n", "<C-w>=", ":<C-u>call VSCodeNotify('workbench.action.evenEditorWidths')<CR>")
+keymap("x", "<C-w>=", ":<C-u>call VSCodeNotify('workbench.action.evenEditorWidths')<CR>")
+keymap("n", "<C-w>_", ":<C-u>call VSCodeNotify('workbench.action.toggleEditorWidths')<CR>")
 
 -- Comments
+-- Bind C-/ to vscode commentary since calling from vscode produces double comments due to multiple cursors
+keymap("n", "<C-/>", ":call Comment()<CR>", opts)
+keymap("x", "<C-/>", ":call Comment()<CR>", opts)
+-- TODO: install Plug
+keymap("n", "gc", ":<Plug>VSCodeCommentary", { remap = true })
+keymap("x", "gc", ":<Plug>VSCodeCommentary", { remap = true })
+keymap("o", "gc", ":<Plug>VSCodeCommentary", { remap = true })
+keymap("n", "gcc", ":<Plug>VSCodeCommentaryLine", { remap = true })
 
--- Options -- (maybe replace for vscodium native settings.json ?)
+-- Whichkey
+keymap("n", "<Space>", ":call VSCodeNotify('whichkey.show')<CR>")
+keymap("x", "<Space>", ":call VSCodeNotify('whichkey.show')<CR>")
+
+
+-- Options --
+-- "Editor customization (like relative number or scrolloff) is handled by VSCodium".
+-- TODO: Look and replace for vscodium native settings.json ?)
 vim.opt.backup = false,                          -- creates a backup file
 vim.opt.clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
 vim.opt.height = 1,                              -- more space in the neovim command line for displaying messages

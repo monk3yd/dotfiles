@@ -1,8 +1,4 @@
 {
-    // --- Window ---
-    "window.zoomLevel": 0,
-
-    // --- Workbench ---
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.iconTheme": "material-icon-theme",
