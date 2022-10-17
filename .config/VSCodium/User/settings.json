@@ -1,7 +1,6 @@
 {
     "workbench.colorTheme": "Gruvbox Material Dark",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "material-icon-theme",
 
     // --- Editor ---
     "editor.cursorBlinking": "solid",
@@ -1055,7 +1054,6 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "terminal.explorerKind": "external",
     "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false,
     "aws.experiments": {
         "CodeWhisperer": false
@@ -1071,4 +1069,17 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "python.linting.pycodestylePath": "/home/monk3yd/anaconda3/bin/pycodestyle",
+    "workbench.iconTheme": "material-icon-theme",
+    "window.zoomLevel": 1,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "sshfs.configs": [
+        {
+            "name": "pjud_scraper",
+            "host": "ec2-100-24-74-6.compute-1.amazonaws.com",
+            "username": "ubuntu",
+            "privateKeyPath": "$HOME/GDrive/theLab/work/ssh_certs/pjud.pem",
+            "agent": "$SSH_AUTH_SOCK",
+            "sftpSudo": true
+        }
+    ],
 }
