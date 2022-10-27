@@ -1,6 +1,6 @@
 [Added Associations]
 application/pdf=okularApplication_pdf.desktop;firefox.desktop;gimp.desktop;
-application/x-shellscript=org.gnome.Meld.desktop;userapp-alacritty -e nvim-N18DR1.desktop;Alacritty.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;nvim.desktop;codium.desktop;
+application/x-shellscript=nvim.desktop;org.gnome.Meld.desktop;userapp-alacritty -e nvim-N18DR1.desktop;Alacritty.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;codium.desktop;
 text/x-python=org.gnome.Meld.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;codium.desktop;
 application/xml=userapp-alacritty -e nvim-F1KTQ1.desktop;nvim.desktop;
 text/x-scheme=nvim.desktop;
@@ -9,12 +9,19 @@ text/x-matlab=userapp-alacritty -e nvim-N18DR1.desktop;
 text/html=codium.desktop;
 text/javascript=userapp-alacritty -e nvim-N18DR1.desktop;
 text/x-lua=userapp-alacritty -e nvim-N18DR1.desktop;
-application/json=userapp-alacritty -e nvim-N18DR1.desktop;codium.desktop;
+application/json=nvim.desktop;userapp-alacritty -e nvim-N18DR1.desktop;codium.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=insync.desktop;
 application/x-x509-ca-cert=vim.desktop;
+application/x-ipynb+json=visual-studio-code.desktop;
+image/png=gimp.desktop;org.xfce.ristretto.desktop;
+image/jpeg=gimp.desktop;org.xfce.ristretto.desktop;
+image/bmp=org.xfce.ristretto.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop
 text/plain=userapp-alacritty -e nvim-N18DR1.desktop
+image/jpeg=org.xfce.ristretto.desktop
+image/png=org.xfce.ristretto.desktop
+image/bmp=org.xfce.ristretto.desktop
 
 [Removed Associations]
