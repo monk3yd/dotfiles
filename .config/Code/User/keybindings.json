@@ -1,0 +1,283 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // Better navigation
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.navigateUp",
+      // don't activate during insert mode
+      "when": "editorTextFocus && neovim.mode != insert",
+      // input to send to neovim (backend)
+      "args": "<C-k>"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "workbench.action.navigateDown",
+      "when": "editorTextFocus && neovim.mode != insert",
+      "args": "<C-j>"
+    },
+    {
+      "key": "ctrl+h",
+      "command": "workbench.action.navigateLeft",
+      "when": "editorTextFocus && neovim.mode != insert",
+      "args": "<C-h>"
+    },
+    {
+      "key": "ctrl+l",
+      "command": "workbench.action.navigateRight",
+      "when": "editorTextFocus && neovim.mode != insert",
+      "args": "<C-l>"
+
+    },
+    // Split editor
+    {
+      "key": "ctrl+s",
+      "command": "workbench.action.splitEditor",
+      "when": "editorTextFocus && neovim.mode != insert",
+      "args": "<C-w>s"
+    },
+    {
+      "key": "ctrl+v",
+      "command": "workbench.action.splitEditor",
+      "when": "editorTextFocus && neovim.mode != insert",
+      "args": "<C-w>v"
+    },
+    // Move through open tabs
+    {
+      "key": "shift+l",
+      "command": "workbench.action.nextEditor",
+      "when": "editorTextFocus && neovim.mode != insert",
+    },
+    {
+      "key": "shift+h",
+      "command": "workbench.action.previousEditor",
+      "when": "editorTextFocus && neovim.mode != insert",
+    },
+    // WhichKey
+    {
+      "key": "space",
+      "command": "whichkey.show",
+      "when": "editorTextFocus && neovim.mode != insert"
+    },
+    {
+      "key": "shift+ctrl+e",
+      "command": "actions.findWithSelection"
+    },
+    {
+      "key": "ctrl+e",
+      "command": "-actions.findWithSelection"
+    },
+    {
+      "key": "ctrl+e",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "shift+ctrl+e",
+      "command": "-workbench.view.explorer"
+    },
+    {
+      "key": "r",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "enter",
+      "command": "-renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "j",
+      "command": "list.focusDown",
+      "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "k",
+      "command": "list.focusUp",
+      "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "selectNextSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "selectPrevSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "tab",
+      "command": "selectNextSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "tab",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "shit+tab",
+      "command": "selectPrevSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "shift+tab",
+      "command": "selectPrevSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "shift+tab",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "enter",
+      "command": "list.select",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+      "key": "l",
+      "command": "list.select",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "o",
+      "command": "list.toggleExpand",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "h",
+      "command": "list.collapse",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "a",
+      "command": "explorer.newFile",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "shift+a",
+      "command": "explorer.newFolder",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "shift+;",
+      "command": "insertPrevSuggestion",
+      "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+    },
+    {
+      "key": "ctrl+l",
+      "when": "sideBarFocus",
+      "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.terminal.focus",
+      "when": "!terminalFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "-editor.action.insertLineAfter",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+      "key": "alt+j",
+      "command": "workbench.action.terminal.focus",
+      "when": "!terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.togglePanel"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "-workbench.action.togglePanel"
+    },
+    {
+      "key": "shift+k",
+      "command": "editor.action.showHover",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+k ctrl+i",
+      "command": "-editor.action.showHover",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "shift+tab",
+      "command": "-acceptAlternativeSelectedSuggestion",
+      "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
+    },
+    {
+      "key": "ctrl+f",
+      "command": "-vscode-neovim.ctrl-f",
+      "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+      "key": "ctrl+s",
+      "command": "-workbench.action.files.save"
+    },
+    {
+      "key": "ctrl+\\",
+      "command": "-workbench.action.splitEditor"
+    },
+    {
+      "key": "ctrl+\\",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+    },
+    {
+      "key": "ctrl+`",
+      "command": "-workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
+    },
+    {
+      "key": "ctrl+[",
+      "command": "editor.fold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "ctrl+shift+[",
+      "command": "-editor.fold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "ctrl+[",
+      "command": "-editor.action.outdentLines",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+]",
+      "command": "-editor.action.indentLines",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+]",
+      "command": "editor.unfold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "ctrl+shift+]",
+      "command": "-editor.unfold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "escape",
+      "command": "-notebook.cell.quitEdit",
+      "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible"
+    },
+  ]
