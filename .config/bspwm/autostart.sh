@@ -30,7 +30,7 @@ run insync start &
 sleep 13
 run volumeicon &
 
-run alacritty
+run kitty
 
 # conky -c $HOME/.config/bspwm/system-overview &
 # run variety &
