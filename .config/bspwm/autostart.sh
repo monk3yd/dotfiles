@@ -27,10 +27,10 @@ run nm-applet &
 run blueman-applet &
 run insync start &
 
-sleep 13
+sleep 15
 run volumeicon &
 
-run kitty
+run alacritty
 
 # conky -c $HOME/.config/bspwm/system-overview &
 # run variety &
