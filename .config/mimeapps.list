@@ -1,12 +1,12 @@
 [Added Associations]
 application/pdf=okularApplication_pdf.desktop;firefox.desktop;gimp.desktop;
 application/x-shellscript=nvim.desktop;org.gnome.Meld.desktop;userapp-alacritty -e nvim-N18DR1.desktop;Alacritty.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;codium.desktop;
-text/x-python=org.gnome.Meld.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;codium.desktop;
+text/x-python=userapp-alacritty -e nvim-M7C2U1.desktop;org.gnome.Meld.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;codium.desktop;
 application/xml=userapp-alacritty -e nvim-F1KTQ1.desktop;nvim.desktop;
 text/x-scheme=nvim.desktop;
-text/plain=userapp-alacritty -e nvim-N18DR1.desktop;org.gnome.Meld.desktop;calibre-gui.desktop;codium.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;
+text/plain=userapp-alacritty -e nvim-M7C2U1.desktop;sqlitebrowser.desktop;nvim.desktop;firefox.desktop;userapp-alacritty -e nvim-N18DR1.desktop;org.gnome.Meld.desktop;calibre-gui.desktop;codium.desktop;userapp-alacritty -e nvim-F1KTQ1.desktop;
 text/x-matlab=userapp-alacritty -e nvim-N18DR1.desktop;
-text/html=codium.desktop;
+text/html=nvim.desktop;codium.desktop;
 text/javascript=userapp-alacritty -e nvim-N18DR1.desktop;
 text/x-lua=userapp-alacritty -e nvim-N18DR1.desktop;
 application/json=nvim.desktop;userapp-alacritty -e nvim-N18DR1.desktop;codium.desktop;
@@ -14,8 +14,10 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=insync.d
 application/x-x509-ca-cert=vim.desktop;
 application/x-ipynb+json=visual-studio-code.desktop;
 image/png=gimp.desktop;org.xfce.ristretto.desktop;
-image/jpeg=gimp.desktop;org.xfce.ristretto.desktop;
+image/jpeg=gimp.desktop;feh.desktop;org.xfce.ristretto.desktop;
 image/bmp=org.xfce.ristretto.desktop;
+application/msword=firefox.desktop;insync.desktop;
+text/x-log=userapp-alacritty -e nvim-M7C2U1.desktop;nvim.desktop;
 
 [Default Applications]
 x-scheme-handler/postman=Postman.desktop

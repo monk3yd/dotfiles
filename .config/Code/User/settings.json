@@ -8,7 +8,6 @@
     "editor.fontFamily": "MonoLisa Nerd Font, JetBrainsMono Nerd Font, Hack, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on",
     "editor.formatOnSave": false,
-    "editor.minimap.enabled": false,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "auto",
     "editor.snippetSuggestions": "bottom",
@@ -1033,7 +1032,8 @@
     "python.showStartPage": false,
     "javascript.referencesCodeLens.enabled": true,
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+        "*.ipynb": "jupyter-notebook",
+        "*.db": "sqlite-viewer.option"
     },
     "jupyter.alwaysTrustNotebooks": true,
     "jupyter.insidersChannel": "off",
@@ -1119,4 +1119,5 @@
     "aws.profile": "profile:default",
     "editor.showFoldingControls": "always",
     "notebook.showFoldingControls": "always",
+    "editor.minimap.enabled": false,
 }
