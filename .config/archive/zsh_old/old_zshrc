@@ -103,3 +103,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"

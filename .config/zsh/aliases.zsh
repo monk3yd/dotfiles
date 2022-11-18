@@ -57,10 +57,6 @@ alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/
 alias m="git checkout master"
 alias s="git checkout stable"
 
-## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
 #keyboard
 alias give-me-qwerty-us="sudo localectl set-x11-keymap us"
@@ -76,14 +72,14 @@ alias upate='sudo pacman -Syyu'
 alias updte='sudo pacman -Syyu'
 alias updqte='sudo pacman -Syyu'
 
-#add new fonts
+# add new fonts
 alias update-fc='sudo fc-cache -fv'
 
-#btrfs aliases
+# btrfs aliases
 alias btrfsfs="sudo btrfs filesystem df /"
 alias btrfsli="sudo btrfs su li / -t"
 
-#snapper aliases
+# snapper aliases
 alias snapcroot="sudo snapper -c root create-config /"
 alias snapchome="sudo snapper -c home create-config /home"
 alias snapli="sudo snapper list"
@@ -96,13 +92,13 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 # skel
-#copy/paste all content of /etc/skel over to home folder - backup of config created - beware
-#skel alias has been replaced with a script at /usr/local/bin/skel
+# copy/paste all content of /etc/skel over to home folder - backup of config created - beware
+# skel alias has been replaced with a script at /usr/local/bin/skel
 
-#backup contents of /etc/skel to hidden backup folder in home/user
+# backup contents of /etc/skel to hidden backup folder in home/user
 alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
 
-#copy shell configs
+# copy shell configs
 alias cb='cp /etc/skel/.bashrc ~/.bashrc && echo "Copied."'
 alias cz='cp /etc/skel/.zshrc ~/.zshrc && exec zsh'
 alias cf='cp /etc/skel/.config/fish/config.fish ~/.config/fish/config.fish && echo "Copied."'
