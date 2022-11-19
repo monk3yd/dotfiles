@@ -81,9 +81,17 @@ super + F7
 # SUPER + SHIFT KEYS
 #################################################################
 
+# Reload bspwm
+super + shift + r
+
+	~/.config/bspwm/bspwmrc
 # Reload sxhkd
 super + shift + s
 	pkill -USR1 -x sxhkd
+
+# kill
+super + shift + q
+	bspc node -c
 
 # Polybar toogle
 super + shift + b
@@ -140,9 +148,6 @@ super + @space
 alt + @space
 	RiceSelector &
 
-# Reload sxhkd
-super + Escape
-	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'El archivo de configuracion se ha recargado con exito'
 	
 # Random wallpaper
 super + alt + w
