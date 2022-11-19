@@ -8,7 +8,7 @@ notification_type=0
 [StatusIcon]
 stepsize=1
 onclick=alacritty -e 'pulsemixer'
-theme=Default
+theme=White Gnome
 use_panel_specific_icons=true
 lmb_slider=false
 mmb_mute=false
