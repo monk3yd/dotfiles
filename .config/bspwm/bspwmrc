@@ -4,8 +4,7 @@
 #   | __ ) ___||  _ \ \      / /  \/  |  - z0mbi3
 #   |  _ \___ \| |_) \ \ /\ / /| |\/| |  - https://github.com/gh0stzk/dotfiles
 #   | |_) |__) |  __/ \ V  V / | |  | |  - z0mbi3.zk@protonmail.com
-#   |____/____/|_|     \_/\_/  |_|  |_|
-#                                    z0mbi3 config..
+#   |____/____/|_|     \_/\_/  |_|  |_|  - modified by monk3yd
 
 
 bash $HOME/.config/bspwm/autostart.sh &
@@ -44,8 +43,8 @@ bspc config split_ratio                0.5  # each new window use half of parent
 # Padding
 # bspc config top_padding              30
 bspc config bottom_padding             0
-bspc config left_padding               0
-bspc config right_padding              0
+# bspc config left_padding               10
+# bspc config right_padding              10
 
 # Monocle
 bspc config single_monocle             true
