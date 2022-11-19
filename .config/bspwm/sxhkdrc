@@ -101,6 +101,30 @@ super + shift + b
 # ctrl + shift + p
 #    ~/.config/bspwm/scripts/picom-toggle.sh
 
+# Focus/swap windows by direction
+super + {_,shift + }{h,j,k,l}
+	bspc node --{focus,swap} {west,south,north,east}
+
+# Flip layout vertically/horizontally
+super + {_,shift + }a
+	bspc node @/ --flip {vertical,horizontal}
+
+#Move window to selected desktop FOR QWERTY KEYBOARDS
+super + shift + {1-9,0}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
+# Move focused window to other monitor
+super + shift + Left
+	bspc node -m next --follow
+
+super + shift + Right
+	bspc node -m next --follow
+
+super + shift + Up
+	bspc node -m next --follow
+
+super + shift + Down
+	bspc node -m next --follow
 # Apps
 shift + alt + {b,g,n,p,r,t,q,w,m,v,k}
        {firefox, \
