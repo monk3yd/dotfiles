@@ -1,14 +1,21 @@
 #!/bin/sh
+
 # dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # shortcuts
-alias j='z'
-alias f='zi'
-alias g='lazygit'
-alias r='ranger'
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias v="nvim"
+alias g="lazygit"
+alias r="ranger"
+alias ls="ls -a --color=auto"
+
+alias j="z"
+alias f="zi"
+
+# shortcuts to config files
 alias nvimrc='nvim ~/.config/nvim/init.lua'
+alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+
 
 # get fastest mirrors
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
@@ -111,14 +118,14 @@ case "$(uname -s)" in
 
 Darwin)
 	# echo 'Mac OS X'
-	alias ls='ls -G'
+	# alias ls='ls -G'
 	;;
 
 Linux)
-    alias v="nvim"
-    alias ls='ls -a --color=auto'
-    alias ctb="chsh -s /bin/bash"
-    alias ctz="chsh -s /bin/zsh"
+    # alias v="nvim"
+    # alias ls='ls -a --color=auto'
+    # alias ctb="chsh -s /bin/bash"
+    # alias ctz="chsh -s /bin/zsh"
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
