@@ -18,10 +18,10 @@ SOURCE=$(getDefaultSource)
 
 case $1 in
     "--up")
-        pamixer --increase 10
+        pamixer --increase 1
         ;;
     "--down")
-        pamixer --decrease 10
+        pamixer --decrease 1
         ;;
     "--mute")
         pamixer --toggle-mute
