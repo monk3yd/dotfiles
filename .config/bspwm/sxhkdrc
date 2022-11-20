@@ -83,8 +83,8 @@ super + F7
 
 # Reload bspwm
 super + shift + r
-
 	~/.config/bspwm/bspwmrc
+
 # Reload sxhkd
 super + shift + s
 	pkill -USR1 -x sxhkd
@@ -109,9 +109,9 @@ super + {_,shift + }{h,j,k,l}
 super + {_,shift + }a
 	bspc node @/ --flip {vertical,horizontal}
 
-#Move window to selected desktop FOR QWERTY KEYBOARDS
+# Move window to selected desktop FOR QWERTY KEYBOARDS
 super + shift + {1-9,0}
-    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+  id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
 # Move focused window to other monitor
 super + shift + Left
@@ -125,6 +125,7 @@ super + shift + Up
 
 super + shift + Down
 	bspc node -m next --follow
+
 # Apps
 shift + alt + {b,g,n,p,r,t,q,w,m,v,k}
        {firefox, \
@@ -149,20 +150,20 @@ shift + alt + {b,g,n,p,r,t,q,w,m,v,k}
 		     
 # screenshoots
 super + Print
-        screenshoter
+  flameshot gui
         
 # Change transparency on focused window
 ctrl + alt {plus,minus,t}
-		{picom-trans -c -o +3, picom-trans -c -o -1, picom-trans -c -d}
+	{picom-trans -c -o +3, picom-trans -c -o -1, picom-trans -c -d}
         
         
 # Apagar, Reiniciar, Cerrar Sesion, bloquear
 ctrl + super + alt + {p,r,q,l}
-        {systemctl poweroff, systemctl reboot,bspc quit,betterlockscreen -l}
+  {systemctl poweroff, systemctl reboot,bspc quit,betterlockscreen -l}
         
 # Matar Procesos
 ctrl + super + alt + k
-		{xkill}
+	{xkill}
         
 # Menu aplicaciones
 super + @space
@@ -177,7 +178,6 @@ alt + @space
 super + alt + w
 	RandomWall
 
-#
 # bspwm hotkeys
 #
 	
@@ -206,7 +206,6 @@ super + equal
 # Make split ratios balanced
 super + minus
 	bspc node @/ --balance
-
 
 # alternate between the tiled and monocle layout
 super + m
@@ -310,15 +309,15 @@ XF86AudioMute
 	pactl set-sink-mute 0 toggle
 
 XF86AudioPlay 
-        playerctl play-pause
-        
+  playerctl play-pause
+   
 XF86AudioStop
-        playerctl stop
-        
+  playerctl stop
+   
 XF86AudioNext 
-        playerctl next
-        
+  playerctl next
+   
 XF86AudioPrev 
-        playerctl previous
-        
-        
+  playerctl previous
+   
+   
