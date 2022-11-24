@@ -1,3 +1,4 @@
+-- Core
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -20,3 +21,6 @@ require "user.indentline"
 require "user.alpha"
 require "user.lsp"
 require "user.dap"
+
+-- Experiments
+require "user.vim-tmux-navigator"
