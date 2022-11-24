@@ -6,8 +6,21 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 # shortcuts
 alias v="nvim"
 alias g="lazygit"
-alias r="ranger"
 alias ls="ls -a --color=auto"
+
+# tmux
+alias t="tmux"
+
+# attach to an existing session
+alias ta="t a -t"
+
+# list all sessions
+alias tls="t ls"
+
+# start new session
+alias tn="t new -t"
+
+# alias r="ranger"
 
 alias j="z"
 alias f="zi"
