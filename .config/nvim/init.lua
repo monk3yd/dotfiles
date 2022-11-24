@@ -23,4 +23,4 @@ require "user.lsp"
 require "user.dap"
 
 -- Experiments
-require "user.vim-tmux-navigator"
+require "user.nvim-tmux-navigation"

@@ -118,7 +118,9 @@ return packer.startup(function(use)
   use { "folke/which-key.nvim" }
   use { "NvChad/nvim-colorizer.lua", commit = "2c13c8f426ba19f8280c21d54eacc216a4e6d3b2" }
   use { "stevearc/dressing.nvim" }  -- UI
-  use { "christoomey/vim-tmux-navigator" }
+
+  use { "alexghergh/nvim-tmux-navigation" }
+  -- use { "christoomey/vim-tmux-navigator" }
   -- use { "untitled-ai/jupyter_ascending.vim" }  -- Jupyter Notebooks
 
   -- "Want to install" Plugins
