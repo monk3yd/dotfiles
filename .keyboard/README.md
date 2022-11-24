@@ -1,0 +1,2 @@
+- https://superuser.com/questions/566871/how-to-map-the-caps-lock-key-to-escape-key-in-arch-linux
+- https://opensource.com/article/18/11/how-swap-ctrl-and-caps-lock-your-keyboard
