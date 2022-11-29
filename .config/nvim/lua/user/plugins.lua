@@ -120,8 +120,8 @@ return packer.startup(function(use)
   use { "stevearc/dressing.nvim" }  -- UI
 
   use { "alexghergh/nvim-tmux-navigation" }
-  -- use { "christoomey/vim-tmux-navigator" }
-  -- use { "untitled-ai/jupyter_ascending.vim" }  -- Jupyter Notebooks
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+
 
   -- "Want to install" Plugins
   -- use "nvim-telescope/telescope-media-files.nvim" -- render images and other media files within telescope

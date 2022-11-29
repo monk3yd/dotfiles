@@ -43,6 +43,14 @@ nvim_tree.setup {
       },
     },
   },
+  filters = {
+    dotfiles = false,
+  },
+  git = {
+    enable = true,
+    ignore = false,
+    timeout = 500,
+  },
   diagnostics = {
     enable = true,
     show_on_dirs = true,
