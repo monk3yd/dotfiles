@@ -25,3 +25,4 @@ require "user.dap"
 -- Experiments
 require "user.nvim-tmux-navigation"
 require "user.ufo"
+require "user.dap-python"
