@@ -37,10 +37,12 @@ vim.opt.sidescrolloff = 8                       -- minimal number of screen colu
 vim.opt.guifont = "MonoLisa:h17"                -- the font used in graphical neovim applications.  default: "monospace:h17"
 
 -- Special
-vim.opt.fillchars.eob=" "                       -- show empty lines at the end of a buffer as ` ` {default `~`}
+-- vim.opt.fillchars.eob=" "                       -- show empty lines at the end of a buffer as ` ` {default `~`}
 vim.opt.shortmess:append "c"                    -- hide all the completion messages, e.g. "-- XXX completion (YYY)", "match 1 of 2", "The only match", "Pattern not found"
 vim.opt.whichwrap:append("<,>,[,],h,l")         -- keys allowed to move to the previous/next line when the beginning/end of line is reached
 vim.opt.iskeyword:append("-")                   -- treats words with `-` as single words
+vim.opt.formatoptions:remove({ "c", "r", "o" }) -- This is a sequence of letters which describes how automatic formatting is to be done
+vim.opt.linebreak = true
 
 -- Personal options
 vim.opt.guicursor = ""                          -- cursor block all times
@@ -55,8 +57,9 @@ vim.opt.errorbells = false
 vim.opt.softtabstop = 4
 
 -- Folding
-vim.o.foldcolumn = '1' -- '0' is not bad
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
-vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.opt.foldcolumn = '1' -- '0' is not bad
+vim.opt.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+vim.opt.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+

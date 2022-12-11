@@ -132,7 +132,7 @@ local mappings = {
   -- ["F"] = { "<CMD>Telescope live_grep theme=ivy<CR>", "Find Text" },
   ["P"] = { "<CMD>lua require('telescope').extensions.projects.projects()<CR>", "Projects" },
   -- ["R"] = { '<CMD>lua require("renamer").rename()<CR>', "Rename" },
-  ["z"] = { "<CMD>ZenMode<CR>", "Zen" },
+  -- ["z"] = { "<CMD>ZenMode<CR>", "Zen" },
   ["gy"] = "Link",
 
   B = {

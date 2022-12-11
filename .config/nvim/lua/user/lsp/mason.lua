@@ -1,12 +1,15 @@
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+-- LSP configuration servers
 local servers = {
 	"sumneko_lua",
-	"cssls",
-	"html",
-	"tsserver",
 	"pyright",
-	"bashls",
+  "bashls",
+  "html",
+	"cssls",
 	"jsonls",
 	"yamlls",
+	"marksman",
+	"dockerls",
 }
 
 local settings = {
