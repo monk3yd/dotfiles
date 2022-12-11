@@ -15,7 +15,6 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- Normal --
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
@@ -35,44 +34,35 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
--- keymap("n", "<RightMouse>", ":Alpha<CR>", opts)
-
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
--- Move text up and down
+-- Move text up and down (normal mode)
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
--- Folding remap
-keymap("n", "<leader>z", "za", opts)
+-- Move text up and down (visual mode)
+keymap("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
--- Insert --
--- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- Move text up and down (visual block mode)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- Move text up and down (Alt)
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+-- Folding remap
+keymap("n", "<leader>z", "za", opts)
 
--- Copy/Paste
--- vim.api.nvim_set_keymap("n", "<C-c>", '"*y :let @+=@*<CR>', {noremap=true, silent=true})
--- vim.api.nvim_set_keymap("n", "<C-v>", '"+p', {noremap=true, silent=true})
+-- Press jk fast to enter
+keymap("i", "jk", "<ESC>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
-
--- Visual Block --
--- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Split screen
 keymap("n", "<leader>v", ":vsplit<CR>", opts)  -- vertically
@@ -82,24 +72,23 @@ keymap("n", "<leader>s", ":split<CR>", opts)  -- horizontally
 -- Toogle HEX Colorizer
 keymap("n", "<leader>kt", ":ColorizerToggle<CR>", opts)
 
-
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
--- Telescope
+-- Telescope (Fuzzy Finder)
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)  -- fzf find files
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)  -- fzf find text
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)  -- fzf find projects
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts) -- fzf find buffers
 
--- Git
+-- Git (lazygit)
 keymap("n", "<leader>gg", "<CMD>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
+keymap("n", "<leader>/", "<CMD>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
 
--- LSP
+-- LSP (Language Server Protocol)
 keymap("n", "<leader>lf", "<CMD>lua vim.lsp.buf.formatting()<CR>", opts)
 keymap("n", "<leader>li", "<CMD>LspInfo<CR>", opts)
 keymap("n", "<leader>lI", "<CMD>LspInstallInfo<CR>", opts)
@@ -109,14 +98,14 @@ keymap("n", "<leader>lj", "<CMD>lua vim.diagnostic.goto_next({buffer=0})<CR>", o
 keymap("n", "<leader>lk", "<CMD>lua vim.diagnostic.goto_prev({buffer=0})<CR>", opts)
 keymap("n", "<leader>lr", "<CMD>lua vim.lsp.buf.rename()<CR>", opts)
 
--- DAP
-keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
-keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
-keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
-keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
-keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
-keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
-keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
-keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+-- DAP (Debug Adapter Protocol)
+keymap("n", "<leader>db", "<CMD>lua require'dap'.toggle_breakpoint()<CR>", opts)
+keymap("n", "<leader>dc", "<CMD>lua require'dap'.continue()<CR>", opts)
+keymap("n", "<leader>di", "<CMD>lua require'dap'.step_into()<CR>", opts)
+keymap("n", "<leader>do", "<CMD>lua require'dap'.step_over()<CR>", opts)
+keymap("n", "<leader>dO", "<CMD>lua require'dap'.step_out()<CR>", opts)
+keymap("n", "<leader>dr", "<CMD>lua require'dap'.repl.toggle()<CR>", opts)
+keymap("n", "<leader>dl", "<CMD>lua require'dap'.run_last()<CR>", opts)
+keymap("n", "<leader>du", "<CMD>lua require'dapui'.toggle()<CR>", opts)
+keymap("n", "<leader>dt", "<CMD>lua require'dap'.terminate()<CR>", opts)
 
