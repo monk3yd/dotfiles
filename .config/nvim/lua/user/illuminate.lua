@@ -7,8 +7,8 @@ end
 local keymap = vim.keymap.set
 
 vim.g.Illuminate_ftblacklist = {"alpha", "NvimTree"}
-keymap("n", "<a-n>", "<CMD>lua require"illuminate".next_reference{wrap=true}<CR>", {noremap=true})
-keymap("n", "<a-p>", "<CMD>lua require"illuminate".next_reference{reverse=true,wrap=true}<CR>", {noremap=true})
+keymap("n", "<a-n>", "<CMD>lua require('illuminate').next_reference{wrap=true}<CR>", {noremap=true})
+keymap("n", "<a-p>", "<CMD>lua require('illuminate').next_reference{reverse=true,wrap=true}<CR>", {noremap=true})
 
 illuminate.configure {
   providers = {
