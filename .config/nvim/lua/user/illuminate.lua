@@ -3,9 +3,12 @@ if not status_ok then
 	return
 end
 
-vim.g.Illuminate_ftblacklist = {'alpha', 'NvimTree'}
-vim.api.nvim_set_keymap('n', '<a-n>', '<cmd>lua require"illuminate".next_reference{wrap=true}<cr>', {noremap=true})
-vim.api.nvim_set_keymap('n', '<a-p>', '<cmd>lua require"illuminate".next_reference{reverse=true,wrap=true}<cr>', {noremap=true})
+-- Shorten function name
+local keymap = vim.keymap.set
+
+vim.g.Illuminate_ftblacklist = {"alpha", "NvimTree"}
+keymap("n", "<a-n>", "<CMD>lua require"illuminate".next_reference{wrap=true}<CR>", {noremap=true})
+keymap("n", "<a-p>", "<CMD>lua require"illuminate".next_reference{reverse=true,wrap=true}<CR>", {noremap=true})
 
 illuminate.configure {
   providers = {
