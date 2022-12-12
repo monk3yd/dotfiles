@@ -24,12 +24,12 @@ keymap('n', 'zM', ufo.closeAllFolds)
 keymap('n', 'zm', ufo.closeFoldsWith) -- closeAllFolds == closeFoldsWith(0)
 keymap('n', 'zr', ufo.openFoldsExceptKinds)
 
-vim.keymap.set('n', 'K', function()
-    local winid = ufo.peekFoldedLinesUnderCursor()
-    if not winid then
-        vim.lsp.buf.hover()
-    end
-end)
+-- vim.keymap.set('n', 'K', function()
+--     local winid = ufo.peekFoldedLinesUnderCursor()
+--     if not winid then
+--         vim.lsp.buf.hover()
+--     end
+-- end)
 
 ufo.setup({
   open_fold_hl_timeout = 150,

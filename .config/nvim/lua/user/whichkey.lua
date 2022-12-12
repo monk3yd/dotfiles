@@ -110,26 +110,13 @@ local m_mappings = {
 
 local mappings = {
   ["a"] = { "<CMD>lua vim.lsp.buf.code_action()<CR>", "Action" },
-  b = { "<CMD>lua require('monk3yd.bfs').open()<CR>", "Buffers" },
-  -- b = { "<CMD>JABSOpen<CR>", "Buffers" },
-  -- ["b"] = {
-  --   "<CMD>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>",
-  --   "Buffers",
-  -- },
+  -- b = { "<CMD>lua require('monk3yd.bfs').open()<CR>", "Buffers" },
   ["e"] = { "<CMD>NvimTreeToggle<CR>", "Explorer" },
   ["w"] = { "<CMD>w<CR>", "Write" },
   ["h"] = { "<CMD>nohlsearch<CR>", "No HL" },
   ["q"] = { '<CMD>lua require("monk3yd.functions").smart_quit()<CR>', "Quit" },
   ["/"] = { '<CMD>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
-  -- ["c"] = { "<CMD>Bdelete!<CR>", "Close Buffer" },
   ["c"] = { "<CMD>Bdelete!<CR>", "Close Buffer" },
-
-  -- :lua require'lir.float'.toggle()
-  -- ["f"] = {
-  --   "<CMD>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>",
-  --   "Find files",
-  -- },
-  -- ["F"] = { "<CMD>Telescope live_grep theme=ivy<CR>", "Find Text" },
   ["P"] = { "<CMD>lua require('telescope').extensions.projects.projects()<CR>", "Projects" },
   -- ["R"] = { '<CMD>lua require("renamer").rename()<CR>', "Rename" },
   -- ["z"] = { "<CMD>ZenMode<CR>", "Zen" },
@@ -201,12 +188,6 @@ local mappings = {
     x = { "<CMD>lua require'dap'.terminate()<CR>", "Exit" },
   },
 
-  -- nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-  -- nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-  -- require("dapui").open()
-  -- require("dapui").close()
-  -- require("dapui").toggle()
-
   f = {
     name = "Find",
     b = { "<CMD>Telescope git_branches<CR>", "Checkout branch" },
@@ -229,24 +210,20 @@ local mappings = {
 
   g = {
     name = "Git",
+    -- D = { "<CMD>lua vim.lsp.buf.declaration()<CR>", "Declaration" },
+    -- d = { "<CMD>lua vim.lsp.buf.definition()<CR>", "Definition" },
     g = { "<CMD>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     j = { "<CMD>lua require 'gitsigns'.next_hunk()<CR>", "Next Hunk" },
     k = { "<CMD>lua require 'gitsigns'.prev_hunk()<CR>", "Prev Hunk" },
-    l = { "<CMD>GitBlameToggle<CR>", "Blame" },
+    -- l = { "<CMD>GitBlameToggle<CR>", "Blame" },
     p = { "<CMD>lua require 'gitsigns'.preview_hunk()<CR>", "Preview Hunk" },
     r = { "<CMD>lua require 'gitsigns'.reset_hunk()<CR>", "Reset Hunk" },
     R = { "<CMD>lua require 'gitsigns'.reset_buffer()<CR>", "Reset Buffer" },
     s = { "<CMD>lua require 'gitsigns'.stage_hunk()<CR>", "Stage Hunk" },
-    u = {
-      "<CMD>lua require 'gitsigns'.undo_stage_hunk()<CR>",
-      "Undo Stage Hunk",
-    },
+    u = { "<CMD>lua require 'gitsigns'.undo_stage_hunk()<CR>", "Undo Stage Hunk" },
     o = { "<CMD>Telescope git_status<CR>", "Open changed file" },
     b = { "<CMD>Telescope git_branches<CR>", "Checkout branch" },
     c = { "<CMD>Telescope git_commits<CR>", "Checkout commit" },
-    d = {
-      "<CMD>Gitsigns diffthis HEAD<CR>",
-      "Diff",
     },
     G = {
       name = "Gist",
@@ -257,7 +234,6 @@ local mappings = {
       l = { "<CMD>Gist -l<CR>", "List" },
       p = { "<CMD>Gist -b -p<CR>", "Create Private" },
     },
-  },
   -- k = {
   --   name = "Colorizer",
   --   t = { "<CMD>ColorizerToggle<CR>"}
